@@ -30,13 +30,8 @@ def construct_features(data,examples,bk):
 def GBLMNN(data,pos,neg,bk,target):
     """shows an example of metric learning using Rel-GBLMNN
        Relational Gradient Boosted Large Margin Nearest Neighbor
-       
-       this is data about men,women and dogs
-       h(man) means man is happy
-       o(man,dog) means man owns dog
-       r(man,woman,term) means man is in relationship with woman for long term or short term
     """
-
+    
     data_rep = construct_features(data,pos+neg,bk)
     r = len(data_rep[pos[0]])
 
@@ -62,6 +57,12 @@ def GBLMNN(data,pos,neg,bk,target):
     
 
 if __name__ == '__main__':
+    """
+    this is data about men,women and dogs
+       h(man) means man is happy
+       o(man,dog) means man owns dog
+       r(man,woman,term) means man is in relationship with woman for long term or short term
+    """
 
     data = ['o(m1,d1)','r(m1,w1,st)',
             'o(m2,d2)','r(m2,w2,st)',
