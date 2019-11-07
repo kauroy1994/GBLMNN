@@ -30,6 +30,9 @@ def construct_features(data,examples,bk):
 def GBLMNN(data,pos,neg,bk,target):
     """shows an example of metric learning using Rel-GBLMNN
        Relational Gradient Boosted Large Margin Nearest Neighbor
+       
+       OUTPUT: Set of boosted models for each phi dimension,
+       where phi is the non linear map of each example
     """
     
     data_rep = construct_features(data,pos+neg,bk)
